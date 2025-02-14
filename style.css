@@ -1,0 +1,133 @@
+* {
+	--header-font-family: "GraphikWideTrial-Semibold";
+	--header-font-size: clamp(1rem, calc(1rem + 3vw), 4vw);
+	--cell-font-family: "Century Gothic Pro";
+	--cell-font-size: clamp(4rem, calc(5rem + 8vw), 20vmax);
+	--score-font-family: "GraphikTrial-Medium";
+	--score-font-size: clamp(1rem, calc(1rem + 3vw), 4vw);
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	box-sizing: border-box
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container#everything {
+	display: grid;
+	height: 800px;
+	width: 800px;
+}
+
+/* Flex layout for entire page  */
+p.container#header {
+	background-color: blue;
+	grid-column: 1 / 4;
+	grid-row: 1 / 2;
+}
+
+div.container#middle {
+	background-color: red;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: auto 1fr auto;
+	height: 100%;
+	width: 100%;
+	grid-column: 1 / 4;
+	grid-row: 2 / 3;
+}
+
+div.container#footer {
+	background-color: blue;
+	grid-column: 1 / 4;
+	grid-row: 3 / 4;
+}
+
+/* Flex layout for middle section */
+#middle > div.container#left {
+	grid-column: 1 / 2;
+	background-color: green;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25px;
+}
+
+#middle > div.container#grid {
+	grid-column: 2 / 3;
+	background-color: yellow;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+}
+
+#middle > div.ccd ontainer#right {
+	grid-column: 3 / 4;
+	background-color: green;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25px;
+}
+
+.cell {
+	background-color: antiquewhite;
+	border: solid 1px gray;
+	aspect-ratio: 1 / 1;
+	min-width: 0;
+}
+
+.cell:hover {
+	background-color: rgb(251, 245, 237);
+	cursor: pointer;
+}
+
+.cell#1 {
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+}
+
+.cell#2 {
+	grid-row: 1 / 2;
+	grid-column: 2 / 3;
+}
+
+.cell#3 {
+	grid-row: 1 / 2;
+	grid-column: 3 / 4;
+}
+
+.cell#4 {
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
+}
+
+.cell#5 {
+	grid-row: 2 / 3;
+	grid-column: 2 / 3;
+}
+
+.cell#6 {
+	grid-row: 2 / 3;
+	grid-column: 3 / 4;
+}
+
+.cell#7 {
+	grid-row: 3 / 4;
+	grid-column: 1 / 2;
+}
+
+.cell#8 {
+	grid-row: 3 / 4;
+	grid-column: 2 / 3;
+}
+
+.cell#9 {
+	grid-row: 3 / 4;
+	grid-column: 3 / 4;
+}

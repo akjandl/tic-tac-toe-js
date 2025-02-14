@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWL :: Tic-Tac-Toe</title>
+  <script src="./game.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container" id="everything">
+    <dialog id="player-create">
+      <p>Enter player names.</p>
+      <form method="dialog" id="name-form">
+        <div class="form-set">
+          <label for="player-one">Player 1:</label>
+          <input type="text" id="player-one" name="player-one">
+        </div>
+        <div class="form-set">
+          <label for="player-two">Player 2:</label>
+          <input type="text" id="player-two" name="player-two">
+        </div>
+        <div class="form-set">
+          <button id="go" type="submit">Go</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="result">
+      <p id="announcement"></p>
+      <button id="continue">Continue</button>
+    </dialog>
+    <p class=container id="header">TIC TAC TOE</p>
+    <div class="container" id="middle">
+      <div class="container" id="left">
+        <div class="scoreboard" id="player1"></div><span id="p1score"></span>
+      </div>
+      <div class="container" id="grid"></div>
+      <div class="container" id="right">
+        <div class="scoreboard" id="player2"></div><span id="p2score"></span>
+      </div>
+    </div>
+    <div class="container" id="footer">
+      <button>Reset</button>
+    </div>
+  </div>
+</body>
+
+</html>
